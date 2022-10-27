@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>{% block title %}Chino's Travel{% endblock %}</title>
+
+   <link rel="stylesheet" href={{ url_for("static", filename="/assets/css/style.css") }}>
+
+   <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/d02da7c116.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+   <div class="toppy"></div>
+   <header>
+      <a href="/">
+         <div class="wrapper max-w-1000 tb-pad-40"> 
+            <div class="left">
+               <div class="logo-text">
+                  <h1>Let's Bl😉g.</h1>
+               </div>
+            </div>
+            <div class="right">
+   <!-- 
+               <div class="search-box">
+                  <img src="/static/images/icons/search-icon.svg" alt="" srcset="">
+               </div> -->
+               
+            </div>
+         </div>
+      </a>
+   </header>
+
+   {% block main %}{% endblock %}
+   
+   <footer class="t-pad-100">
+      <div class="footer-wrapper">
+         <div class="owner-container tb-pad-40 max-w-1000">
+            <h3 class="who">Made by Chukwu Daniel 😁</h3>
+         </div>
+      </div>
+   </footer>
+</body>
+</html>
