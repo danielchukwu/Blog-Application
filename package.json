@@ -1,0 +1,24 @@
+{
+  "name": "litcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielchukwu/Blog-Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielchukwu/Blog-Application/issues"
+  },
+  "homepage": "https://github.com/danielchukwu/Blog-Application#readme",
+  "dependencies": {
+    "node-pg-migrate": "^6.2.2",
+    "pg": "^8.8.0"
+  }
+}
