@@ -18,6 +18,7 @@ body {background-color: #f0f1f3; min-height: 100vh;}
 /* Variables */
 :root {
    --theme-white: #fff;
+   --theme-black: #000;
    --theme-green: #00ABB3;
    --theme-grey:  #3C4048;
    --theme-dark: #181818;
@@ -137,8 +138,8 @@ li span {margin}
 .blog-card {
    height: 100%;
    width: 100%;
-   background-color: #fff;
-   border-radius: 5px;
+   background-color: var(--theme-white);
+   border-radius: 10px;
    overflow: hidden;
    cursor: pointer;
    /* box-shadow: rgba(1,171,179, 0.09) 2px 3px 5px; */
@@ -191,7 +192,7 @@ li span {margin}
 }
 
 .who {
-   color: #fff;
+   color: var(--theme-white);
    /* display: inline; */
 }
 
@@ -215,7 +216,7 @@ li span {margin}
    cursor: pointer;
 }
 .blog-owner em:hover{
-   color: #000;
+   color: var(--theme-black);
    font-weight: 400
 }
 .blog-owner em:active {font-weight: 600;}
@@ -275,7 +276,7 @@ li span {margin}
 }
 
 .user-card, .info-card {
-   background-color: #fff;
+   background-color: var(--theme-white);
    padding: 25px 20px;
    border-radius: 20px;
 }
@@ -346,4 +347,10 @@ li span {margin}
 .card-title h3, .info-card h3 {
    font-weight: 600;
    font-size: 1.2rem;
+}
+
+.tc-grid {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 50px;
 }
