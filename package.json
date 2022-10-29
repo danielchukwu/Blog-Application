@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "migrate": "node-pg-migrate"
   },
   "repository": {
     "type": "git",
@@ -16,9 +16,5 @@
   "bugs": {
     "url": "https://github.com/danielchukwu/Blog-Application/issues"
   },
-  "homepage": "https://github.com/danielchukwu/Blog-Application#readme",
-  "dependencies": {
-    "node-pg-migrate": "^6.2.2",
-    "pg": "^8.8.0"
-  }
+  "homepage": "https://github.com/danielchukwu/Blog-Application#readme"
 }
