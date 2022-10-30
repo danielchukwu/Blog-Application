@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 
+
+{% block header_1 %}
+{{super()}}
+{% endblock %}
+
+{% block header_2 %}{% endblock %}
+
+
 {% block main %}
-   <main class="t-pad-75">
+   <main class="t-pad-220">
       <div class="content-wrapper max-w-1000">
 
          <div class="top-section">
@@ -10,7 +18,7 @@
             </div>
    
             <div class="blog-owner t-pad-50">
-               <a href="/user-profile/{{ context.blog.user_id }}">
+               <a href="/users/{{ context.blog.user_id }}">
                   <em>created by {{ context.blog.username }}</em>
                </a>
                <div class="round-img-xs">
@@ -32,7 +40,7 @@
             </div>
 
             <div class="about-user">
-               <a href="/user-profile/{{ context.blog.user_id }}">
+               <a href="/users/{{ context.blog.user_id }}">
 
                   <div class="user-card">
                      <div class="user-card-top">
