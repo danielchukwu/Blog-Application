@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/danielchukwu/Blog-Application/issues"
   },
-  "homepage": "https://github.com/danielchukwu/Blog-Application#readme"
+  "homepage": "https://github.com/danielchukwu/Blog-Application#readme",
+  "dependencies": {
+    "gsap": "^3.11.3"
+  }
 }
