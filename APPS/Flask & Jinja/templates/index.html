@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 
+{% block header_1 %}
+{{super()}}
+{% endblock %}
+{% block header_2 %}{% endblock %}
+
 {% block main %}
-<main class="t-pad-100">
+<main class="t-pad-220">
    <div class="content-wrapper max-w-1000">
       <div class="grid-wrapper">
 
          {% for blog in context.blogs %}
-         <a href="/blog/{{blog.id}}">
+         <a href="/blogs/{{blog.id}}">
             <div class="blog-card">
                <div class="blog-img">
                   <img src="{{blog.img}}" alt="">
