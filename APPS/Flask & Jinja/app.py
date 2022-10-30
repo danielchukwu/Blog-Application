@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import psycopg2
 import os
 import info
@@ -29,6 +29,7 @@ def get_blogs(cur):
    blogs = [ { keys[i]:v for i,v in enumerate(row) } for row in blogs_row]
    
    return blogs
+
 
 def get_user_blogs(cur, id):
    cur.execute("""
@@ -117,7 +118,6 @@ def close_cur_conn(cur, conn):
 
 
 
-
 # Create flask app
 app = Flask(__name__)
 
@@ -133,7 +133,7 @@ def index():
    return render_template("index.html", context=context)
 
 
-@app.route("/blog/<id>")
+@app.route("/blogs/<id>")
 def blog(id):
    conn = create_connection()
    cur = conn.cursor()
@@ -145,7 +145,7 @@ def blog(id):
    return render_template("blog.html", context=context)
 
 
-@app.route("/user-profile/<id>")
+@app.route("/users/<id>")
 def profile(id):
    conn = create_connection()
    cur = conn.cursor()
@@ -156,6 +156,25 @@ def profile(id):
 
    context = {"user": user, "blogs": blogs}
    return render_template("profile.html", context=context)
+
+
+@app.route("/login/", methods=["GET", "POST"])
+def login():
+   if request.method == "GET":
+      return render_template("login.html")
+   else:
+      print(request.form['username'])
+      print(request.form['password'])
+      return render_template("login.html")
+      
+
+
+@app.route("/sign-up/", methods=["GET", "POST"])
+def sign_up():
+   if request.method == "GET":
+      return render_template("sign-up.html")
+   else:
+      return render_template("sign-up.html")
 
 
 if __name__ == "__main__":
