@@ -18,13 +18,13 @@ instagram = 'https://www.instagram.com/danielllchukwu/'
 
 exports.up = pgm => {
    pgm.sql(`
-      INSERT INTO users (name, username, email, avatar, bio, location, website, linkedin, facebook, twitter, instagram)
+      INSERT INTO users (name, username, email, avatar, bio, location, password, website, linkedin, facebook, twitter, instagram)
       VALUES 
-         ('Chukwu Daniel', 'danielchukwu_', '00chukwudaniel@gmail.com', '${profile_pictures[0]}', 'jeremiah 9:23-34', 'kubwa, Abuja', '${website}', '${linkedin}', '${facebook}', '${twitter}', '${instagram}'),
+         ('Chukwu Daniel', 'danielchukwu_', '00chukwudaniel@gmail.com', '${profile_pictures[0]}', 'jeremiah 9:23-34', 'kubwa, Abuja', 'password123', '${website}', '${linkedin}', '${facebook}', '${twitter}', '${instagram}'),
 
-         ('Micheal Scott', 'micheallo', '00danzy@gmail.com', '${profile_pictures[1]}', 'Live is good. Never been better.', 'colorado, United States', '${website}', '${linkedin}', '${facebook}', '${twitter}', '${instagram}'),
+         ('Micheal Scott', 'micheallo', '00danzy@gmail.com', '${profile_pictures[1]}', 'Live is good. Never been better.', 'colorado, United States', 'password123', '${website}', '${linkedin}', '${facebook}', '${twitter}', '${instagram}'),
 
-         ('john winter', 'johnny_boy', 'daniellchukw@yahoo.com', '${profile_pictures[2]}', 'Just a simple guy', 'colorado, United States', '${website}', '${linkedin}', '${facebook}', '${twitter}', '${instagram}');
+         ('john winter', 'johnny_boy', 'daniellchukw@yahoo.com', '${profile_pictures[2]}', 'Just a simple guy', 'colorado, United States', 'password123', '${website}', '${linkedin}', '${facebook}', '${twitter}', '${instagram}');
    `)
 };
 
