@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/danielchukwu/Blog-Application#readme",
   "dependencies": {
-    "gsap": "^3.11.3"
+    "gsap": "^3.11.3",
+    "node-pg-migrate": "^6.2.2"
   }
 }
