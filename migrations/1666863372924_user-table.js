@@ -13,6 +13,7 @@ exports.up = pgm => {
          cover VARCHAR(200),
          bio VARCHAR(300),
          location VARCHAR(50),
+         password VARCHAR(120),
 
          website VARCHAR(200),
          linkedin VARCHAR(200),
