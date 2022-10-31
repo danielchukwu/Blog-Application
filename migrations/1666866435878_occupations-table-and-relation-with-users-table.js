@@ -12,7 +12,7 @@ exports.up = pgm => {
       CREATE TABLE occupations_users (
          id SERIAL PRIMARY KEY,
          occupation_id INTEGER NOT NULL,
-         user_id INTEGER NOT NULL,
+         user_id INTEGER NOT NULL UNIQUE,
          
          UNIQUE(occupation_id, user_id)
       );
