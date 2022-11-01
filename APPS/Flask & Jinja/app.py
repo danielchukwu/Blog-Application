@@ -312,7 +312,7 @@ app = Flask(__name__)
 
 # Routes
 @app.route("/")
-@token_required
+# @token_required
 def index():
    db = DbManager()
    blogs = db.get_blogs()
@@ -355,7 +355,7 @@ def login():
       db.close_cur_conn()
 
       if user:
-         token = jwt.encode({'user_id' : user.public_id, 'exp' : datetime.datetime.utcnow() + datetime.timedelta(minutes=45)}, app.config['SECRET_KEY'], "HS256")
+         token = jwt.encode({'user_id' : user[0], 'exp' : datetime.datetime.utcnow() + datetime.timedelta(minutes=45)}, app.config['SECRET_KEY'], "HS256")
 
          return jsonify({'token' : token})
       else:
