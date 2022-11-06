@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Chino's Travel</title>
+
+   <link rel="stylesheet" href="assets/css/style.css">
+
+   <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/d02da7c116.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+   <header class="content-wrapper">
+      <div class="wrapper-rl max-w-1000"> 
+         <div class="left">
+            <a href="/">
+               <div class="logo-text">
+                  <h1 title="Home">Let's Bl😉g.</h1>
+               </div>
+            </a>
+         </div>
+      </div>
+   </header>
+
+   <main class=" t-pad-120 b-pad-50">
+      
+      <div class="rl-wrapper">
+         <div class="rl-container max-w-1000">
+            
+            <div class="create-blog-container lr-pad-30 tb-pad-30">
+
+               <!-- TITLE -->
+               <div class="cb-title rl-fields">
+                  <label for="title">Title</label>
+                  <input type="text" name="title" id="title" required>
+               </div>
+
+               <!-- THUMBNAIL -->
+               <div class="t-pad-50">
+                  <input type="file">
+               </div>
+               <div class="cb-thumbnail display-image t-mar-50">
+               </div>
+
+               <!-- CONTENT -->
+               <div class="cb-content rl-fields t-mar-50">
+                  <label for="content">Content</label>
+                  <textarea name="content" class="" id="textarea"></textarea>
+                  <div class="flex-right">
+                     <button class="btn-square t-mar-10">Create</button>
+                  </div>
+
+               </div>
+
+            </div>
+            
+         </div>
+      </div>
+
+   </main>
+
+   <script>
+      
+      // UPLOAD IMAGE: Preview
+      const imageInput = document.querySelector('input[type="file"]');
+      var uploaded_image = '';
+      
+      console.log(imageInput);
+      imageInput.addEventListener("change", function() {
+         const reader = new FileReader();
+         reader.addEventListener('load', () => {
+            uploaded_image = reader.result;
+            document.querySelector('.display-image').style.backgroundImage = `url(${uploaded_image})`;
+         })
+         reader.readAsDataURL(this.files[0])         
+      })      
+      
+
+      // TEXTAREA: Auto Resize
+      const textarea = document.getElementById("textarea")
+
+      textarea.style.cssText = `height: ${textarea.scrollHeight}px; overflow-y: hidden;`
+      
+      textarea.addEventListener("input", function() {
+         console.log('just changed!')
+         this.style.height = 'auto';
+         this.style.height = `${this.scrollHeight}px`;
+      })
+      
+   </script>
+
+
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+   <script src="index.js"></script> -->
+
+</body>
+</html>
