@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Chino's Travel</title>
+
+   <link rel="stylesheet" href="assets/css/style.css">
+
+   <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/d02da7c116.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+   <header class="content-wrapper">
+      <div class="wrapper-rl max-w-1000"> 
+         <div class="left">
+            <a href="/">
+               <div class="logo-text">
+                  <h1 title="Home">Let's Bl😉g.</h1>
+               </div>
+            </a>
+         </div>
+      </div>
+   </header>
+
+
+   <main class="vh-90 t-pad-vh-10">
+      
+      <div class="rl-wrapper">
+         <div class="rl-container max-w-1000">
+            <div class="edit-profile-grid lr-pad-10">
+               
+               <!-- SECTION: LEFT, IMAGE -->
+               <div class="ep-contianer-1 ep rl-fields">
+                  <div class="ep-img-container t-pad-15">
+                     <div class="round-img-200 display-image" style="background-image: url(/static/extra/passpor.jpg);">
+                     </div>
+                  </div>
+
+                  <p class="right-username cp pointer t-pad-10">Change Picture</p>
+                  <input type="file" style="display: none;">
+                  
+               </div>
+
+               <!-- SECTON: RIGHT, INFO FIELDS -->
+               <div class="ep-contianer-2 ep rl-fields">
+                  <div class="ep-info-container">
+                     <div class="ep-info-l1 r-pad-10">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required>
+                        <label for="username">username</label>
+                        <input type="text" name="username" id="username" required>
+                        <label for="email">email</label>
+                        <input type="email" name="email" id="email" required>
+                        <label for="location">location</label>
+                        <input type="text" name="location" id="location" required>
+                        <label for="instagram">instagram</label>
+                        <input type="text" name="instagram" id="instagram" required>
+                        
+                     </div>
+                     <div class="ep-info-l2 l-pad-10">
+                        <label for="website">website</label>
+                        <input type="text" name="website" id="website" required>
+                        <label for="linkedin">linkedin</label>
+                        <input type="text" name="linkedin" id="linkedin" required>
+                        <label for="facebook">facebook</label>
+                        <input type="text" name="facebook" id="facebook" required>
+                        <label for="youtube">youtube</label>
+                        <input type="text" name="youtube" id="youtube" required>
+                        <label for="twitter">twitter</label>
+                        <input type="text" name="twitter" id="twitter">
+
+                     </div>
+                  </div>
+                  <div class="bio-container">
+                     <label for="bio">Bio</label>
+                     <textarea name="bio" class="bio-textarea"></textarea>
+                     <div class="flex-right">
+                        <button class="btn-square t-mar-10">Save Changes</button>
+                     </div>
+
+                  </div>
+
+                  <div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </div>
+
+   </main>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+   <script src="index.js"></script>
+
+   <script>
+      // UPLOAD IMAGE: Preview
+      const imageInput = document.querySelector('input[type="file"]');
+      var uploaded_image = '';
+      
+      console.log(imageInput);
+      imageInput.addEventListener("change", function() {
+         const reader = new FileReader();
+         reader.addEventListener('load', () => {
+            uploaded_image = reader.result;
+            document.querySelector('.display-image').style.backgroundImage = `url(${uploaded_image})`;
+         })
+         reader.readAsDataURL(this.files[0])
+      })
+
+      // CLICK: Image Input
+      const change_picture_btn = document.querySelector('.cp')
+
+      change_picture_btn.addEventListener('click', function() {
+         imageInput.click()
+      })
+
+   </script>
+
+</body>
+</html>
