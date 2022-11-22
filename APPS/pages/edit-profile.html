@@ -31,65 +31,70 @@
       
       <div class="rl-wrapper">
          <div class="rl-container max-w-1000">
-            <div class="edit-profile-grid lr-pad-10">
-               
-               <!-- SECTION: LEFT, IMAGE -->
-               <div class="ep-contianer-1 ep rl-fields">
-                  <div class="ep-img-container t-pad-15">
-                     <div class="round-img-200 display-image" style="background-image: url(/static/extra/passpor.jpg);">
-                     </div>
-                  </div>
-
-                  <p class="right-username cp pointer t-pad-10">Change Picture</p>
-                  <input type="file" style="display: none;">
+            <form>
+               <div class="edit-profile-grid lr-pad-10 traditional-input">
                   
+                  <!-- SECTION: LEFT, IMAGE -->
+                  <div class="ep-contianer-1 ep rl-fields">
+                     <div class="ep-img-container t-pad-15">
+                        <!-- <div class="round-img-200 display-image" style="background-image: url(/static/extra/passpor.jpg);"> -->
+                        <div class="round-img-200 display-image">
+                           <img src="/static/extra/passpor.jpg" alt="">
+                        </div>
+                     </div>
+   
+                     <p class="right-username cp pointer t-pad-10">Change Picture</p>
+                     <input type="file" style="display: none;">
+                     
+                  </div>
+   
+                  <!-- SECTON: RIGHT, INFO FIELDS -->
+                  <div class="ep-contianer-2 ep rl-fields">
+                     <div class="ep-info-container">
+                        <div class="ep-info-l1 r-pad-10">
+                           <label for="name">Name</label>
+                           <input type="text" name="name" id="name" required>
+                           <label for="username">username</label>
+                           <input type="text" name="username" id="username" required>
+                           <label for="email">email</label>
+                           <input type="email" name="email" id="email" required>
+                           <label for="location">location</label>
+                           <input type="text" name="location" id="location" required>
+                           <label for="instagram">instagram</label>
+                           <input type="text" name="instagram" id="instagram" required>
+                           
+                        </div>
+                        <div class="ep-info-l2 l-pad-10">
+                           <label for="website">website</label>
+                           <input type="text" name="website" id="website" required>
+                           <label for="linkedin">linkedin</label>
+                           <input type="text" name="linkedin" id="linkedin" required>
+                           <label for="facebook">facebook</label>
+                           <input type="text" name="facebook" id="facebook" required>
+                           <label for="youtube">youtube</label>
+                           <input type="text" name="youtube" id="youtube" required>
+                           <label for="twitter">twitter</label>
+                           <input type="text" name="twitter" id="twitter">
+   
+                        </div>
+                     </div>
+                     <div class="bio-container">
+                        <label for="bio">Bio</label>
+                        <textarea name="bio" class="bio-textarea"></textarea>
+                        <div class="flex-right">
+                           <button class="btn-square t-mar-10">Save Changes</button>
+                        </div>
+   
+                     </div>
+   
+                     <div>
+                     </div>
+                  </div>
+   
                </div>
-
-               <!-- SECTON: RIGHT, INFO FIELDS -->
-               <div class="ep-contianer-2 ep rl-fields">
-                  <div class="ep-info-container">
-                     <div class="ep-info-l1 r-pad-10">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" required>
-                        <label for="username">username</label>
-                        <input type="text" name="username" id="username" required>
-                        <label for="email">email</label>
-                        <input type="email" name="email" id="email" required>
-                        <label for="location">location</label>
-                        <input type="text" name="location" id="location" required>
-                        <label for="instagram">instagram</label>
-                        <input type="text" name="instagram" id="instagram" required>
-                        
-                     </div>
-                     <div class="ep-info-l2 l-pad-10">
-                        <label for="website">website</label>
-                        <input type="text" name="website" id="website" required>
-                        <label for="linkedin">linkedin</label>
-                        <input type="text" name="linkedin" id="linkedin" required>
-                        <label for="facebook">facebook</label>
-                        <input type="text" name="facebook" id="facebook" required>
-                        <label for="youtube">youtube</label>
-                        <input type="text" name="youtube" id="youtube" required>
-                        <label for="twitter">twitter</label>
-                        <input type="text" name="twitter" id="twitter">
-
-                     </div>
-                  </div>
-                  <div class="bio-container">
-                     <label for="bio">Bio</label>
-                     <textarea name="bio" class="bio-textarea"></textarea>
-                     <div class="flex-right">
-                        <button class="btn-square t-mar-10">Save Changes</button>
-                     </div>
-
-                  </div>
-
-                  <div>
-                  </div>
-               </div>
-
             </div>
-         </div>
+
+            </form>
       </div>
 
    </main>
@@ -107,7 +112,7 @@
          const reader = new FileReader();
          reader.addEventListener('load', () => {
             uploaded_image = reader.result;
-            document.querySelector('.display-image').style.backgroundImage = `url(${uploaded_image})`;
+            document.querySelector('.display-image img').src = uploaded_image
          })
          reader.readAsDataURL(this.files[0])
       })
