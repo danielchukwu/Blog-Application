@@ -7,16 +7,16 @@ IMAGE_PATH = '../posts/blog-images'
 
 // beach, coding, exercise, fifa-23, fifa-23, gta-6, nba, peter-obi, pool, ronaldo
 blog_images = [
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/blog-images/beach.jpg",
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/blog-images/codingroom.jpg",
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/blog-images/exercise.jpg",
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/blog-images/fifa-23-1.webp",
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/blog-images/fifa-23.webp",
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/blog-images/gta%206.webp",
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/blog-images/nba.jpg",
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/blog-images/Peter-Obi.jpg",
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/blog-images/pool.jpg",
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/blog-images/ronaldo.jpg",
+   "1._jensen-beach-martin-county-florida_emj7jb.jpg",
+   "codingroom_lcbufk.jpg",
+   "exercise_dffino.jpg",
+   "fifa-23_labh83.webp",
+   "fifa-23-1_zjsudl.webp",
+   "gta_6_tdfews.webp",
+   "nba_qktqvn.jpg",
+   "Peter-Obi_xhvgep.jpg",
+   "pool_xlonyp.jpg",
+   "ronaldo_xy950g.jpg",
 ]
 
 // beach, coding, exercise, fifa-23, fifa-23, gta-6, nba, peter-obi, pool, ronaldo
