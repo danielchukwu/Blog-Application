@@ -4,9 +4,9 @@ exports.shorthands = undefined;
 
 // me, 1, 2
 profile_pictures = [
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/profile-images/me.jpg",
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/profile-images/p-0.jpg",
-   "https://raw.githubusercontent.com/danielchukwu/Blog-Application/master/APPS/Flask%20%26%20Jinja/posts/profile-images/p-1.jpg",
+   "me_e4ufyk.jpg",
+   "p-2_kknvfc.jpg",
+   "p-1_u8t19z.jpg",
 ]
 
 website = 'https://chukwudaniel.netlify.app/';
